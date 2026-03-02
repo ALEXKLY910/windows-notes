@@ -12,12 +12,50 @@
 
 3. Install AMD Chipset Driver and NVIDIA driver (Game Ready).
 
-3. Install `AutoHotkey v2` for your custom shortcuts/keybindings. 
+4. Install Chrome
 
-4. Add a SUPER+Q keybinding for Windows Terminal (`wt.exe` app). Reference `windows-notes/misc/autohotkey-v2.md` for how to do it.
+5. Install Happ
+
+6. Install VS Code
+
+7. Istall git:
+    >`winget install --id Git.Git -e --source winget`
+
+    Clone the repo `https://github.com/ALEXKLY910/windows-notes.git`
+
+7. Install PowerToys:
+    >`winget install Microsoft.PowerToys -s winget`
+
+    Configure them.
+
+7. Install Flow Launcher.
+
+
+8. Instsall a clipboard manager that supports clipboard history. **CopyQ**:
+    >`winget install -e --id hluk.CopyQ`
+
+9. Install Monitorian:
+    >`winget install Monitorian -s msstore`
+
+10. Install `AutoHotkey v2` for your custom shortcuts/keybindings. Reference `configs/main-hotkeys.ahk`.
+
+11. Go to settings, reference `settings.md`
+
+12. Configure the shortcuts. Reference `shortcuts.md`
 
 
 
-7. Configure an app launcher.
+
+
+
+
+
+
+
+
+Install Synchthing.
+
+
+
 
 
