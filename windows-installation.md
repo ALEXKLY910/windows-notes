@@ -86,7 +86,13 @@
 14. Install Monitorian:
     >`winget install Monitorian -s msstore`
 
-15. Install Synchthing.
+15. Install Syncthing.
+
+16. Install VLC, Discord, Steam
+
+17. Install fzf:
+    >`winget install fzf`
+
 
 
 
