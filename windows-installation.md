@@ -65,18 +65,32 @@
 7. Install PowerToys:
     >`winget install Microsoft.PowerToys -s winget`
 
-    Configure them.
+    Configure them (leave only Text Extractor, Always-on-Top, File Locksmith and Light Switch)
 
-7. Install Flow Launcher.
+    Remap the Text Extractor to `Win+Shift+X` (and make it not play a sound)
 
-
-8. Instsall a clipboard manager that supports clipboard history. **CopyQ**:
+8. Install a clipboard manager that supports clipboard history. **CopyQ**:
     >`winget install -e --id hluk.CopyQ`
+
+9. Install the Windows Terminal app:
+    >`winget install --id Microsoft.WindowsTerminal -e`
+
+10. Install Flow Launcher. Change the shortcut during the installation to Win+Shift+R
+
+11. Download PicPick. Go to program options. In "Capture" change the output type to Image File. In "Auto Save" turn this feature on and change the folder to something like "C:\Users\alex\Pictures\Screenshots". In "Recording" change the hotkey to None. In hotkeys change all the hotkeys to None except for "Capture Region" for which use the Shift+PrintScreen hotkey.
+
+12. Download VirtualDesktopAccessor.dll from `https://github.com/Ciantic/VirtualDesktopAccessor/releases/` for Windows 10. Put it in the same folder as your autohotkeys scripts. And then reference `workspaces.ahk`.
+
+10. Install `AutoHotkey v2` for your custom shortcuts/keybindings. Reference `configs/main-hotkeys.ahk`.
+
+
+
+
+
 
 9. Install Monitorian:
     >`winget install Monitorian -s msstore`
 
-10. Install `AutoHotkey v2` for your custom shortcuts/keybindings. Reference `configs/main-hotkeys.ahk`.
 
 11. Go to settings, reference `settings.md`
 
