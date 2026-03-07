@@ -81,32 +81,12 @@
 
 12. Download VirtualDesktopAccessor.dll from `https://github.com/Ciantic/VirtualDesktopAccessor/releases/` for Windows 10. Put it in the same folder as your autohotkeys scripts. And then reference `workspaces.ahk`.
 
-10. Install `AutoHotkey v2` for your custom shortcuts/keybindings. Reference `configs/main-hotkeys.ahk`.
+13. Install `AutoHotkey v2` for your custom shortcuts/keybindings. Reference `configs/main-hotkeys.ahk`.
 
-
-
-
-
-
-9. Install Monitorian:
+14. Install Monitorian:
     >`winget install Monitorian -s msstore`
 
-
-11. Go to settings, reference `settings.md`
-
-12. Configure the shortcuts. Reference `shortcuts.md`
-
-
-
-
-
-
-
-
-
-
-
-Install Synchthing.
+15. Install Synchthing.
 
 
 
