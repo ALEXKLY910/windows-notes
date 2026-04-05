@@ -93,6 +93,9 @@
 17. Install fzf:
     >`winget install fzf`
 
+18. Install a command-line enhancer `Clink` and a plugin for fzf `clink-fzf`.
+    1. Download the installer from `https://github.com/chrisant996/clink/releases`. Run it.
+    2. Go to `https://github.com/chrisant996/clink-fzf` and follow the instructions to install clink-fzf.
 
 
 
