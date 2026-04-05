@@ -97,7 +97,7 @@
     1. Download the installer from `https://github.com/chrisant996/clink/releases`. Run it.
     2. Go to `https://github.com/chrisant996/clink-fzf` and follow the instructions to install clink-fzf.
 
-
+19. Install Windows Virtual Desktop Helper from `https://github.com/dankrusi/WindowsVirtualDesktopHelper`.
 
 
 
