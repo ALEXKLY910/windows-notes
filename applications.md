@@ -17,5 +17,5 @@
 # zapret
 # fzf
 # APO Equalizer
-Office Suite (Word, Excel, PowerPoint)
+2Office Suite (Word, Excel, PowerPoint)
 # WizTree
