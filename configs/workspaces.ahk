@@ -43,6 +43,20 @@ Hotkey "#+0", MoveWindowHotkey.Bind(9)
 ; make sure 10 desktops exist, then select desktop 1
 InitDesktops()
 
+SetExactDesktopCount(requiredCount) {
+    while GetDesktopCount() < requiredCount {
+        Send("^#d")        ; Ctrl+Win+D
+        Sleep(120)
+    }
+
+    while GetDesktopCount() > requiredCount {
+        GoToDesktopNumber(GetDesktopCount() - 1)   ; go to the last desktop
+        Sleep(80)
+        Send("^#{F4}")     ; Ctrl+Win+F4 = close current desktop
+        Sleep(120)
+    }
+}
+
 GetDesktopCount() {
     global GetDesktopCountProc
     return DllCall(GetDesktopCountProc, "Int")
@@ -60,7 +74,10 @@ GoToDesktopNumber(desktopNumber) {
 
 MoveActiveWindowToDesktop(desktopNumber) {
     global MoveWindowToDesktopNumberProc
-    hwnd := WinGetID("A")
+    try hwnd := WinGetID("A")
+    catch TargetError
+        return 0
+
     if !hwnd
         return 0
     return DllCall(MoveWindowToDesktopNumberProc, "Ptr", hwnd, "Int", desktopNumber, "Int")
@@ -81,7 +98,7 @@ EnsureDesktopCount(requiredCount) {
 InitDesktops() {
     ; Create desktops until there are 10 total,
     ; then switch to the first desktop (internal number 0)
-    EnsureDesktopCount(10)
+    SetExactDesktopCount(10)
     GoToDesktopNumber(0)
     Sleep(50)
 }
@@ -89,14 +106,17 @@ InitDesktops() {
 GoToDesktopHotkey(desktopNumber, *) {
     EnsureDesktopCount(desktopNumber + 1)
     GoToDesktopNumber(desktopNumber)
+    Sleep(100)
+    Send("!{Tab}")
 }
 
 MoveWindowHotkey(desktopNumber, *) {
     EnsureDesktopCount(desktopNumber + 1)
-    MoveActiveWindowToDesktop(desktopNumber)
-
-    ; Uncomment this if you want to switch to that desktop too:
-    ; GoToDesktopNumber(desktopNumber)
+    if MoveActiveWindowToDesktop(desktopNumber) {
+        GoToDesktopNumber(desktopNumber)
+        Sleep(100)
+        Send("!{Tab}")
+    }
 }
 
 FreeVDA(*) {

@@ -57,7 +57,3 @@ Right::Send "{End}"
 
 ; Win+Ctrl+Shift+S -> regional screenshot to file via PicPick
 ^+#s::Send "+{PrintScreen}"
-
-
-;Light Switch
-#+t::Send "#^+d"
